@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<!-- Required meta tags -->
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+
+<title>Picas y Famas!</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1 class="display-4" style="text-align: center">Picas Y Famas!</h1>
+
+	<div>
+		<form th:object="${tablero}" th:action="@{/game/agregar}"
+			method="post">
+			<div class="form-group">
+				<label for="nombre">Numero a jugar</label> <input
+					th:field="*{picas}" id="picas" type="text" class="form-control" placeholder="Ingresa número">
+			</div>
+
+			<button type="submit" class="btn btn-primary btn-lg btn-block">Jugar</button>
+		</form>
+
+	</div>
+		<p>    </p>
+		<h1>Historial de jugadas</h1>
+		
+	<div>
+
+		<table class="table">
+			<thead class="thead-light">
+				<tr>
+
+					<th scope="col">Numero</th>
+					<th scope="col">Picas</th>
+					<th scope="col">Famas</th>
+
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="tab:${listado}">
+
+					<td th:text="${tab.numero}"></td>
+					<td th:text="${tab.picas}"></td>
+					<td th:text="${tab.famas}"></td>
+				</tr>
+			</tbody>
+		</table>
+
+	</div>
+
+
+
+
+
+</body>
+</html>
