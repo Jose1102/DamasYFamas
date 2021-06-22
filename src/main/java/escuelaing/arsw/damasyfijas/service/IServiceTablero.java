@@ -12,10 +12,18 @@ import org.springframework.stereotype.Service;
 public class IServiceTablero implements ServiceTablero {
 	
 	public int famasTotal = 0;
-	public String valor = "1234";
+	public String valor = random();
 	public boolean ganador = false;
 	
 	
+	public String getValor() {
+		return valor;
+	}
+
+	public void setValor(String valor) {
+		this.valor = valor;
+	}
+
 	@Override
 	/**
 	 * Calcula el número de picas
@@ -24,6 +32,7 @@ public class IServiceTablero implements ServiceTablero {
 	 */
 	public int calculatePicas(int numero) {
 		// TODO Auto-generated method stub
+		
 		int picas = 0;
 		int famas = 0;
 		String nuevaCadena = "";
@@ -98,7 +107,16 @@ public class IServiceTablero implements ServiceTablero {
 	}
 	
 	
-	
+	public String random() {
+		int index = 0;
+		String cadena = "";
+		while(index!=4) {
+			int random = (int) (Math.random()*8+1);
+			cadena = cadena + Integer.toString(random);
+			index++;
+		}
+		return cadena;
+	}
 	
 	
 	

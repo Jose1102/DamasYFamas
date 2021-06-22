@@ -13,13 +13,17 @@ class DamasyfijasApplicationTests {
 
 	@Autowired
 	IServiceTablero service;
+	
+	
+	
 	/**
 	 * Prueba que calcula el número de picas para un número 1
 	 */
 	@Test
 	void calcularPicasNumero1() {
+		service.setValor("4231");
 		int picas = service.calculatePicas(4231);
-		assertEquals(picas,2);
+		assertEquals(picas,4);
 	}
 	
 	/**
@@ -27,6 +31,7 @@ class DamasyfijasApplicationTests {
 	 */
 	@Test
 	void calcularPicasNumero2() {
+		service.setValor("1234");
 		int picas = service.calculatePicas(1243);
 		assertEquals(picas,2);
 	}
@@ -36,6 +41,7 @@ class DamasyfijasApplicationTests {
 	 */
 	@Test
 	void calcularPicasNumero3() {
+		service.setValor("5876");
 		int picas = service.calculatePicas(2341);
 		assertEquals(picas,0);
 	}
@@ -45,6 +51,7 @@ class DamasyfijasApplicationTests {
 	 */
 	@Test
 	void calcularPicasNumero4() {
+		service.setValor("6372");
 		int picas = service.calculatePicas(4278);
 		assertEquals(picas,1);
 	}
@@ -54,6 +61,7 @@ class DamasyfijasApplicationTests {
 	 */
 	@Test
 	void calcularFamasNumero1() {
+		service.setValor("1874");
 		int picas = service.calculatePicas(4231);
 		int famas = service.getFamas();
 		assertEquals(famas,2);
@@ -64,9 +72,10 @@ class DamasyfijasApplicationTests {
 	 */
 	@Test
 	void calcularFamasNumero2() {
+		service.setValor("4567");
 		int picas = service.calculatePicas(1243);
 		int famas = service.getFamas();
-		assertEquals(famas,2);
+		assertEquals(famas,1);
 	}
 	
 	/**
@@ -74,9 +83,10 @@ class DamasyfijasApplicationTests {
 	 */
 	@Test
 	void calcularFamasNumero3() {
+		service.setValor("4137");
 		int picas = service.calculatePicas(2341);
 		int famas = service.getFamas();
-		assertEquals(famas,4);
+		assertEquals(famas,3);
 	}
 	
 	
@@ -85,27 +95,32 @@ class DamasyfijasApplicationTests {
 	 */
 	@Test
 	void calcularFamasNumero4() {
+		service.setValor("9613");
 		int picas = service.calculatePicas(4278);
 		int famas = service.getFamas();
-		assertEquals(famas,1);
+		assertEquals(famas,0);
 	}
-	/**
-	 * Prueba que deberia ganar jugador
-	 */
-	@Test
-	void deberiaGanar() {
-		int picas = service.calculatePicas(1234);
-		boolean isWin = service.isGanador();
-		assertEquals(true,isWin);
-	}
+	
 	
 	/**
 	 * Prueba que deberia perder jugador
 	 */
 	@Test
 	void deberiaPerder() {
-		int picas = service.calculatePicas(1243);
+		service.setValor("1234");
+		int picas = service.calculatePicas(4213);
 		boolean isWin = service.isGanador();
-		assertEquals(false,isWin);
+		assertEquals(isWin,false);
+	}
+	
+	
+	/**
+	 * Prueba que deberia ganar jugador
+	 */
+	@Test
+	void deberiaGanar() {
+		service.setValor("4213");
+		int picas = service.calculatePicas(4213);
+		boolean isWin = service.isGanador();
 	}
 }
