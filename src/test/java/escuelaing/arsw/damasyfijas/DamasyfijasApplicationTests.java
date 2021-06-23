@@ -110,7 +110,7 @@ class DamasyfijasApplicationTests {
 		service.setValor("1234");
 		int picas = service.calculatePicas(4213);
 		boolean isWin = service.isGanador();
-		assertEquals(isWin,false);
+		assertEquals(isWin,false);	
 	}
 	
 	
