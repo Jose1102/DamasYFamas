@@ -1,10 +1,7 @@
 # PicasYFamasGame
 
 
-
-
-Este proyecto busca implementar un servidor que tenga la capacidad de responder solicitudes pero usando hilos. 
-Para el primer ejercicio propuesto se debe implementar una app web sencilla con una tabla de nombres y una pagina que soporte archivos de tipo imagen,texto,js,etc. Por último, se realizó una datagrama CLIENTE-SERVIDOR, donde el datagrama servidor le devuelva por un intervalo de 5 segundos la hora actual al datagrama de cliente y que este se actualice; algo muy parecido a un servidor [NTP](https://www.tecnozero.com/servidor/ntp/). 
+Construya una aplicación en Spring que implemente el famosos juegos de picas y famas y que esté desplegada en Heroku. Entregue su repositorio en github actualizado y el enlace a la aplicación ejecutándose en Heroku.
 
 ## Despliegue Heroku
 
