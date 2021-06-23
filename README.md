@@ -22,6 +22,7 @@ Para el primer ejercicio propuesto se debe implementar una app web sencilla con 
 
 ## Tabla de contenido
 
+- [Circleci](#circleci).
 - [Requisitos](#requisitos-).
 - [Enunciado](#enunciado).
 - [Comenzando](#comenzando-).
@@ -31,6 +32,9 @@ Para el primer ejercicio propuesto se debe implementar una app web sencilla con 
 - [Javadoc](#javaDoc-).
 - [Licencia](#licencia-)
 
+## Circleci
+
+[![CircleCI](https://circleci.com/gh/circleci/circleci-docs.svg?style=svg)](https://app.circleci.com/pipelines/github/Jose1102/PicasYFamasGame)
 
 ## Requisitos 📋
 * [Maven](https://maven.apache.org/) - Manejador de dependencias
@@ -124,4 +128,4 @@ Para consultar la carpeta de [JAVADOC](https://github.com/Jose1102/PicasYFamasGa
 
 ## Licencia 📌
 
-Este proyecto está bajo la Licencia Pública General GNU - consulte el archivo de [LICENCIA](https://github.com/Jose1102/WebServer/blob/master/LICENSE.txt) para obtener más detalles.
+Este proyecto está bajo la Licencia Pública General GNU - consulte el archivo de [LICENCIA](https://github.com/Jose1102/PicasYFamasGame/blob/master/LICENSE.txt) para obtener más detalles.
