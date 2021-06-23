@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"escuelaing.arsw.damasyfijas"},{"l":"escuelaing.arsw.damasyfijas.controller"},{"l":"escuelaing.arsw.damasyfijas.model"},{"l":"escuelaing.arsw.damasyfijas.repository"},{"l":"escuelaing.arsw.damasyfijas.service"}];updateSearchResults();
